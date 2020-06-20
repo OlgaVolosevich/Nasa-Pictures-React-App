@@ -12,7 +12,7 @@ const CalendarContainer = ({ getDate }) => {
 
   return (
     <div className="calendar">
-      <Calendar onChange={onChangeDate} value={date} />
+      <Calendar maxDate={new Date()} onChange={onChangeDate} value={date} />
     </div>
   );
 };
