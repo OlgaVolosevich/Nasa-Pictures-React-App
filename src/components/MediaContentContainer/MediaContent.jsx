@@ -10,7 +10,7 @@ const MediaContent = ({ mediaType, description, title, url }) => {
     case "video":
       return <Video description={description} title={title} url={url} />;
     default:
-      return <Preloader/>;
+      return <Preloader />;
   }
 };
 
