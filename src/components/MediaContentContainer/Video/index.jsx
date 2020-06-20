@@ -1,13 +1,13 @@
 import React from "react";
+import "./video.scss";
 
 const Video = ({ url, title, description }) => {
   return (
-    <div>
-      <h3>{title}</h3>
+    <div className="video">
+      <h2>{title}</h2>
       <iframe
+        className="video__video-area"
         title="title"
-        width="560"
-        height="315"
         src={url}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

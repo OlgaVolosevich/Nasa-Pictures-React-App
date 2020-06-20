@@ -1,6 +1,7 @@
 import React from "react";
 import Picture from "./Picture";
 import Video from "./Video";
+import Preloader from "../PreLoader";
 
 const MediaContent = ({ mediaType, description, title, url }) => {
   switch (mediaType) {
@@ -9,7 +10,7 @@ const MediaContent = ({ mediaType, description, title, url }) => {
     case "video":
       return <Video description={description} title={title} url={url} />;
     default:
-      return "Loading";
+      return <Preloader/>;
   }
 };
 

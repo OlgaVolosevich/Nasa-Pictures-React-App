@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MediaContent from "./MediaContent";
+import Preloader from "./../PreLoader/index";
 
 const MediaContentContainer = ({ date }) => {
   const [publication, getPublication] = useState(null);
@@ -19,7 +20,7 @@ const MediaContentContainer = ({ date }) => {
       url={publication.url}
     />
   ) : (
-    "loading"
+    <Preloader />
   );
 };
 export default MediaContentContainer;

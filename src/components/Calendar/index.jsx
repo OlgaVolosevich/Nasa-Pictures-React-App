@@ -12,6 +12,8 @@ const CalendarContainer = ({ getDate }) => {
 
   return (
     <div className="calendar">
+      <h1>Pick any date please</h1>
+      <h2>Picked date: {date.toLocaleDateString()}</h2>
       <Calendar maxDate={new Date()} onChange={onChangeDate} value={date} />
     </div>
   );

@@ -1,4 +1,8 @@
 .App {
     max-width: 1170px;
     margin: 0 auto;
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 20px;
 }
