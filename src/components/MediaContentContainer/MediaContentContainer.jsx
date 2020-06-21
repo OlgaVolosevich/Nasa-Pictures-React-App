@@ -15,10 +15,10 @@ const MediaContentContainer = ({ date }) => {
         let response = await fetch(
           `https://api.nasa.gov/planetary/apod?api_key=dTAnmKezLULOPHIybC3o5i20G27BlMKfPL3gFFRT&date=${date}`
         );
-        response = await response.json();
-        if (response.code === 500) {
+        if (response.status !== 200) {
           throw new Error();
         } else {
+          response = await response.json();
           getPublication(response);
           setLoading(false);
           setError(false);
